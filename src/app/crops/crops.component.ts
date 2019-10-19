@@ -15,5 +15,10 @@ export class CropsComponent implements OnInit {
   ngOnInit() {
   }
 
+    selectedCrop: Crop
     crops = CROPS
+
+    onSelect(crop: Crop): void {
+        this.selectedCrop = crop
+    }
 }

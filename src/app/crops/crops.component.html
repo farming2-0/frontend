@@ -1,6 +1,17 @@
 <h1>Crops</h1>
-<ul class="crops">
-    <li *ngFor="let aCrop of crops">
-        <span class="badge">{{ aCrop.id }} </span> {{ aCrop.name }}
-    </li>
-</ul>
+<div class="crops">
+    <div class=row>
+        <div *ngFor="let aCrop of crops" (click)="onSelect(aCrop)">
+            <div class="col-4">
+                <span class="badge">{{ aCrop.id }} </span> {{ aCrop.name }}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="selectedCrop">
+    <h2>{{selectedHero.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedCrop.id}}</div>
+    <div> {{ selectedCrop.name }}</div>
+</div>
