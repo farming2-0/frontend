@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { Observable, of } from 'rxjs'
+
 import { Crop } from './crop'
 import { CROPS } from './mock-crops'
 
@@ -10,7 +12,7 @@ export class CropService {
 
     constructor() { }
 
-    getCrops(): Crop[] {
-        return CROPS
+    getCrops(): Observable<Crop[]> {
+        return of(CROPS)
     }
 }

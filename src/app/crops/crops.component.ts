@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Crop } from '../crop'
-import { CROPS } from '../mock-crops'
+import { CropService } from '../crop.service'
+
 
 @Component({
   selector: 'app-crops',
@@ -10,15 +11,21 @@ import { CROPS } from '../mock-crops'
 })
 export class CropsComponent implements OnInit {
 
-  constructor() { }
+    constructor(private cropService: CropService) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.getCrops()
+    }
 
     selectedCrop: Crop
-    crops = CROPS
+    crops: Crop[]
 
     onSelect(crop: Crop): void {
         this.selectedCrop = crop
+    }
+
+    getCrops(): void {
+        this.cropService.getCrops()
+            .subscribe(crops => this.crops = crops)
     }
 }
