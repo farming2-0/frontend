@@ -1,1 +1,19 @@
-<p>stages works!</p>
+<h1>Stages</h1>
+<div class="stages">
+    <div class=row>
+        <div *ngFor="let aStage of stages"
+             class="col-lg-4 col-sm-6 mb-4">
+            <div class="card h-100">
+                <a routerLink='/stages/{{ aStage.id }}'><img class="card-img-top"
+                                                            routerLink="stages/{{ aStage.id }}"
+                                                            src="{{ aStage.image }}"></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a routerLink='/stages/{{ aStage.id }}'>{{ aStage.name }}</a>
+                    </h4>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

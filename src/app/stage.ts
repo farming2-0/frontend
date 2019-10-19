@@ -1,4 +1,4 @@
-export class Crop {
+export class Stage {
     id: string
     name: string
     image: string
