@@ -1,17 +1,20 @@
 <h1>Crops</h1>
 <div class="crops">
     <div class=row>
-        <div *ngFor="let aCrop of crops" (click)="onSelect(aCrop)">
-            <div class="col-4">
-                <span class="badge">{{ aCrop.id }} </span> {{ aCrop.name }}
+        <div *ngFor="let aCrop of crops" (click)="onSelect(aCrop)"
+             class="col-lg-4 col-sm-6 mb-4">
+            <!-- <div class="col-lg-4 col-sm-6 mb-4"> -->
+            <div class="card h-100">
+                <a href="#"><img class="card-img-top"
+                                 src="{{ aCrop.image }}"></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="#">{{ aCrop.name }}</a>
+                    </h4>
+                    <p class="card-text"></p>
+                </div>
             </div>
+            <!-- </div> -->
         </div>
     </div>
-</div>
-
-
-<div *ngIf="selectedCrop">
-    <h2>{{selectedHero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{selectedCrop.id}}</div>
-    <div> {{ selectedCrop.name }}</div>
 </div>
