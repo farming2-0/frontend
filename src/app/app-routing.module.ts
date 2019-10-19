@@ -7,7 +7,7 @@ import { StagesComponent } from './stages/stages.component'
 const routes: Routes = [
     { path: '', redirectTo: '/crops', pathMatch: 'full' },
     { path: 'crops', component: CropsComponent },
-    { path: 'stages', component: StagesComponent }];
+    { path: 'stages/:id', component: StagesComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
