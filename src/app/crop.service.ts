@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs'
@@ -10,9 +11,10 @@ import { CROPS } from './mock-crops'
 })
 export class CropService {
 
-    constructor() { }
+    private cropsUrl = 'back/crops'
+    constructor(private http: HttpClient) { }
 
     getCrops(): Observable<Crop[]> {
-        return of(CROPS)
+        return this.http.get<Crop[]>(this.cropsUrl)
     }
 }
