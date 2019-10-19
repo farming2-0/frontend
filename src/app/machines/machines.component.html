@@ -1,0 +1,19 @@
+<h1>Machines</h1>
+<div class="machines">
+    <div class=row>
+        <div *ngFor="let aMachine of machines"
+             class="col-lg-4 col-sm-6 mb-4">
+            <div class="card h-100">
+                <a routerLink='/machine/{{ aMachine.id }}'><img class="card-img-top"
+                                                               routerLink="machine/{{ aMachine.id }}"
+                                                               src="{{ aMachine.image }}"></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a routerLink='/stages/{{ aMachine.id }}'>{{ aMachine.name }}</a>
+                    </h4>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

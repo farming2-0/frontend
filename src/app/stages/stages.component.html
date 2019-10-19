@@ -4,12 +4,12 @@
         <div *ngFor="let aStage of stages"
              class="col-lg-4 col-sm-6 mb-4">
             <div class="card h-100">
-                <a routerLink='/stages/{{ aStage.id }}'><img class="card-img-top"
+                <a routerLink='/machines/{{ aStage.id }}'><img class="card-img-top"
                                                             routerLink="stages/{{ aStage.id }}"
                                                             src="{{ aStage.image }}"></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a routerLink='/stages/{{ aStage.id }}'>{{ aStage.name }}</a>
+                        <a routerLink='/machines/{{ aStage.id }}'>{{ aStage.name }}</a>
                     </h4>
                     <p class="card-text"></p>
                 </div>
