@@ -3,19 +3,17 @@
     <div class=row>
         <div *ngFor="let aCrop of crops" (click)="onSelect(aCrop)"
              class="col-lg-4 col-sm-6 mb-4">
-            <!-- <div class="col-lg-4 col-sm-6 mb-4"> -->
             <div class="card h-100">
-                <a href="#"><img class="card-img-top"
+                <a routerLink='stages/{{ aCrop.id }}'><img class="card-img-top"
                                  routerLink="stages/{{ aCrop.id }}"
                                  src="{{ aCrop.image }}"></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a href="#">{{ aCrop.name }}</a>
+                        <a routerLink='/stages/{{ aCrop.id }}'>{{ aCrop.name }}</a>
                     </h4>
                     <p class="card-text"></p>
                 </div>
             </div>
-            <!-- </div> -->
         </div>
     </div>
 </div>
